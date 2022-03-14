@@ -1,0 +1,160 @@
+
+@font-face {
+    font-family: "Bitter";
+    src: url("../fonts/Bitter/Bitter-VariableFont_wght.ttf"),
+        url("../fonts/Bitter/Bitter-Italic-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Playfair";
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf"),
+        url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    z-index: 4;
+    font-size: 16px;
+    font-family: "Bitter", Arial, Helvetica, sans-serif;
+    background: url("../Images/background.jpg");
+    background-attachment: fixed;
+    background-position-y: -30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    transition: all 800ms ease-in-out;
+
+    @media(max-width: 1024px){
+        background-position-y: 0;
+    }
+}
+
+.backGround{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 500ms ease-in;
+
+    &#backgroundOne{
+        background: url('../Images/buddha.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &#backgroundTwo{
+        background: url('../Images/aboutUsPho.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &#backgroundThree{
+        background: url('../Images/drink.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+}
+
+
+nav{
+    z-index: 4;
+    background-color: white;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    height: 10rem;
+    font-family: 'Playfair', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    @media(max-width: 576px){
+        height: 15rem;
+    }
+
+    span{
+        font-style: italic;
+        font-size: 1rem;
+        color: rgb(10,77,10);
+    }
+
+    a{
+        position: relative;
+        transition: all 500ms ease-in-out;
+        font-family: "Bitter", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        color: black;
+
+        &::after{
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: .1rem;
+            background-color: rgb(10,77,10);
+            opacity: 1;
+            transform: scale(0);
+            transform-origin: center;
+            transition: all 500ms ease-in-out;
+        }
+        
+        &:hover{
+            color: rgb(10,77,10)
+        }
+
+        &:hover::after, &:focus::after{
+            transform:scale(1);
+        }
+    }
+
+    ul{
+        font-size: 1rem;
+        list-style: none;
+        
+        li{
+            display: inline;
+            margin-left: 25px;
+
+            @media(max-width: 576px){
+                display: block;
+            }
+        }
+
+        button{
+            background-color: transparent;
+            color: white;
+            background-color: rgb(33, 129, 33);
+            padding: .5rem 1rem;
+            border-radius: 25px;
+            transition: all 500ms ease-in-out;
+
+            &:hover{
+                color: rgb(33, 129, 33);
+                background-color: white;
+                border-color: rgb(10,77,10);
+            }
+        }
+    }
+
+    .linksContainer{
+        margin-top: 10px;
+    }
+
+}
+
+
