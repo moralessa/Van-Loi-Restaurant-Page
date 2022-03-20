@@ -27,7 +27,11 @@ const orderNowLoad = ()=>{
     let UberEats = document.createElement('a');
     let grubHub = document.createElement('a');
     UberEats.classList.add('uber');
-    grubHub.classList.add('grub')
+    grubHub.classList.add('grub');
+    UberEats.href = "https://www.ubereats.com/store/pho-van-loi/wo_VqID8QW2TUcfUzc1uSQ";
+    grubHub.href = "https://www.grubhub.com/restaurant/van-loi-restaurant-5451-south-1900-west-roy/1887750";
+    UberEats.target = "blank";
+    grubHub.target = "blank";
     let uberContainer = document.createElement('div');
     uberContainer.classList.add('col-md-6');
     uberContainer.appendChild(UberEats);
